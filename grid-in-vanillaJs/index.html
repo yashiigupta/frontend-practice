@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Practice in JS</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <h2>Grid</h2>
+  <div id="grid"></div>
+  <script>
+    function createGrid(x, y) {
+      const grid = document.getElementById("grid");
+      grid.innerHTML = "";
+      for(let i = 0; i < x; i++) {
+        var row = document.createElement('div');
+        row.classList.add("row");
+        row.innerHTML = "";
+        for(let j = 0; j < y; j++) {
+          const child = document.createElement('div');
+          child.classList.add("block");
+          row.appendChild(child);
+        }
+        grid.appendChild(row);
+      }
+    }
+    createGrid(10, 10);
+  </script>
+</body>
+</html>
