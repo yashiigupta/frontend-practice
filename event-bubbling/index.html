@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div id="grandparent">
+    <button>Grandparent</button>
+    <div id="parent">
+      <button>Parent</button>
+      <div id="child">
+        <button>Child</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const child = document.getElementById("child");
+    const parent = document.getElementById("parent");
+    const grandparent = document.getElementById("grandparent");
+
+    // event bubbling
+    child.addEventListener("click", () => {
+      console.log("child clicked");
+    });
+
+    parent.addEventListener("click", () => {
+      console.log("parent clicked");
+    });
+
+    grandparent.addEventListener("click", () => {
+      console.log("grandparent clicked");
+    });
+  </script>
+</body>
+</html>
