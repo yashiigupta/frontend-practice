@@ -1,0 +1,19 @@
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 1;
+}
+
+.block {
+  height: 2rem;
+  width: 2rem;
+}
